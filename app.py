@@ -15,7 +15,7 @@ def load_data():
     df_db['검색용_상표명'] = df_db['상표명'].astype(str).str.replace(' ', '', regex=False).str.split('(').str[0]
     db_dict = df_db.drop_duplicates(subset=['검색용_상표명']).set_index('검색용_상표명')
     
-    df_mix = pd.read_excel('딸기_혼용정보_데이터정리_팜한농_신젠타코리아_한국삼공 .xlsx')
+    df_mix = pd.read_excel('딸기_혼용정보_데이터정리_팜한농_신젠타코리아_한국삼공.xlsx')
     return db_dict, df_mix
 
 try:
